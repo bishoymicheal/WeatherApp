@@ -1,3 +1,8 @@
 package com.example.usecases
 
-fun randomNumberGenerator()= Math.random()*1000
+import android.arch.lifecycle.MutableLiveData
+
+fun numberIncerementer(liveData: MutableLiveData<Int>,incrementBy:Int=1){
+    val oldValue =liveData.value?:0
+    liveData.postValue(oldValue+1)
+}
