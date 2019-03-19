@@ -3,16 +3,25 @@ package com.waether.app.features.randomizer
 import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
+import com.example.usecases.numberIncerementer
+import com.example.usecases.reposatires.Ticker
 
-class RandomizerViewModel:ViewModel() {
+private const val DEFAULT_VALUE = 0
+private const val INCREMENT_BY_VALUE = 1
 
-    val numberLiveData= MutableLiveData<Int>()
+class RandomizerViewModel : ViewModel() {
+
+    val numberLiveData = MutableLiveData<Int>()
 
     init {
-        numberLiveData.value=1
+        numberLiveData.value = DEFAULT_VALUE
+
     }
 
     override fun onCleared() {
         super.onCleared()
+    }
+    fun incrementNumber(){
+        numberIncerementer(numberLiveData)
     }
 }

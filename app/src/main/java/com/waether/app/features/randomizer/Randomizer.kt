@@ -9,6 +9,7 @@ import com.waether.app.R
 import kotlinx.android.synthetic.main.activity_randomizer.*
 
 class Randomizer: AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_randomizer)
@@ -16,5 +17,8 @@ class Randomizer: AppCompatActivity() {
 
         viewModel.numberLiveData.observe(this,
             Observer { random_number_textView.text=it.toString() })
+        incerement_button.setOnClickListener {
+            viewModel.incrementNumber()
+        }
     }
 }
