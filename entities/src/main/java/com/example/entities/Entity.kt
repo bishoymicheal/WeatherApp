@@ -8,7 +8,6 @@ import java.io.Serializable
 
 @Entity
 data class FavoriteCityId(@field:PrimaryKey @field:NonNull val id: Long) : Serializable
-//hello vworld
 @Entity
 data class City(
     @field:NonNull
