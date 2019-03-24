@@ -15,14 +15,13 @@ fun numberIncerementer(liveData: MutableLiveData<Int>,incrementBy:Int=1){
 //city name must not be null
 //if all is ok ,trigger search
 
-fun searchCityByName(searchName:String
+fun searchCityByName(searchName:String?
     ,searching:MutableLiveData<Boolean>,
                      result: MutableLiveData<List<City>>,
                      repository: CitiesRepository= citiesRepository
 
                      ){
     searchName?.takeUnless { searching.value?:false }
-        ?.takeUnless { it.isBlank() }
         ?.also { searching.postValue(true) }
         ?.let {name-> repository.searchCitiesByName(name) }
         ?.also { searching.postValue(false) }
@@ -34,7 +33,7 @@ fun searchCityByName(searchName:String
 //if favorties not empty, convert them to ids(longs)
 // if is searhcing , then dont trigger action
 
-fun retrivingCtiesByIds(ids:List<Long>
+/*fun retrivingCtiesByIds(ids:List<Long>
                         ,retrieving:MutableLiveData<Boolean>
                         ,result: MutableLiveData<List<City>>
                         ,repository: CitiesRepository= citiesRepository){
@@ -44,7 +43,7 @@ fun retrivingCtiesByIds(ids:List<Long>
         ?.let { repository.retriveCitiesByIds(it) }
         ?.also { result.postValue(it) }
         ?.also { retrieving.postValue(false) }
-}
+}*/
 
 //usecase 3 : retrieve favorite cities by ids
 // if is retrieving , then dont trigger action
