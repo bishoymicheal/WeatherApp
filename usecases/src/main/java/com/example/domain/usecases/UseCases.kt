@@ -1,9 +1,9 @@
-package com.example.usecases
+package com.example.domain.usecases
 
 import android.arch.lifecycle.MutableLiveData
 import com.example.entities.City
-import com.example.usecases.reposatires.CitiesRepository
-import com.example.usecases.reposatires.citiesRepository
+import com.example.domain.reposatires.CitiesRepository
+import com.example.domain.reposatires.citiesRepository
 
 fun numberIncerementer(liveData: MutableLiveData<Int>,incrementBy:Int=1){
     val oldValue =liveData.value?:0

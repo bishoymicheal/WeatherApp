@@ -1,9 +1,9 @@
-package com.example.usecases.reposatires
+package com.example.domain.reposatires
 
 import com.example.entities.City
 import com.example.entities.FavoriteCityId
-import com.example.usecases.database.WeatherDatabase
-import com.example.usecases.database.weatherDatabase
+import com.example.domain.database.WeatherDatabase
+import com.example.domain.database.weatherDatabase
 
 val citiesRepository: CitiesRepository by lazy { CitiesRepositoryImplementer() }
 

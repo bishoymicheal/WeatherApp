@@ -1,8 +1,9 @@
-package com.example.usecases
+package com.example.domain
 
 import android.arch.lifecycle.MutableLiveData
 import com.example.entities.City
-import com.example.usecases.reop.CitiesRepositoryMock
+import com.example.domain.reop.CitiesRepositoryMock
+import com.example.domain.usecases.searchCityByName
 import org.junit.Assert.*
 import org.junit.Test
 
@@ -23,7 +24,7 @@ class UseCasesKtTest{
 
 
         // Act
-        searchCityByName(cityName,searching,result,repository)
+        searchCityByName(cityName, searching, result, repository)
 
         // Assert
         assertTrue(result.value!!.isNotEmpty())

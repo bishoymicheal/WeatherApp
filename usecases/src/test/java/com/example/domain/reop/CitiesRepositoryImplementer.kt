@@ -1,10 +1,8 @@
-package com.example.usecases.reop
+package com.example.domain.reop
 
 import com.example.entities.City
 import com.example.entities.FavoriteCityId
-import com.example.usecases.reposatires.CitiesRepository
-
-import org.junit.Assert.*
+import com.example.domain.reposatires.CitiesRepository
 
 open class CitiesRepositoryMock : CitiesRepository
 {

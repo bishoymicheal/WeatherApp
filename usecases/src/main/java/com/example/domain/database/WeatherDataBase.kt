@@ -1,13 +1,12 @@
-package com.example.usecases.database
+package com.example.domain.database
 
 import android.arch.persistence.room.Database
 import android.arch.persistence.room.RoomDatabase
-import android.arch.persistence.room.TypeConverter
 import android.arch.persistence.room.TypeConverters
 import com.example.entities.City
 import com.example.entities.FavoriteCityId
-import com.example.usecases.applicationLiveData
-import com.example.usecases.getApplication
+import com.example.domain.applicationLiveData
+import com.example.domain.getApplication
 
 val weatherDatabase by lazy {
     initializeDatabase(applicationLiveData.getApplication())

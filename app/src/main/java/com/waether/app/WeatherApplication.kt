@@ -1,7 +1,7 @@
 package com.waether.app
 
 import android.app.Application
-import com.example.usecases.Domin
+import com.example.domain.Domin
 
 class WeatherApplication :Application() {
     override fun onCreate() {

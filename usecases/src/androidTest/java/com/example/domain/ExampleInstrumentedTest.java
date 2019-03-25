@@ -1,4 +1,4 @@
-package com.example.usecases;
+package com.example.domain;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
